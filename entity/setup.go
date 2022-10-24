@@ -299,7 +299,7 @@ func SetupDatabase() {
 	//===
 	med5 := Medicine{
 		Employee: inten1emp,
-		Name:     "ฺBromhexine", //ยาละลายเสมหะ
+		Name:     "Bromhexine", //ยาละลายเสมหะ
 		Type:     med,
 		MFD:      time.Date(2022, 10, 24, 12, 0, 0, 0, time.UTC),
 		EXP:      time.Date(2023, 10, 24, 12, 0, 0, 0, time.UTC),
