@@ -64,26 +64,6 @@ func main() {
 			protected.PATCH("/employee", controller.UpdateEmployee)
 			protected.DELETE("/employee/:id", controller.DeleteEmployee)
 
-			//MedicineLabel
-			protected.GET("/medicine_labels", controller.ListMedicineLabel)
-			protected.GET("/medicine_label/:id", controller.GetMedicineLabel)
-			protected.POST("/medicine_label", controller.CreateMedicineLabel)
-			protected.PATCH("/medicine_label", controller.UpdateMedicineLabel)
-			protected.DELETE("/medicine_label/:id", controller.DeleteMedicineLabel)
-
-			//MedicineUse
-			protected.GET("/medicine_uses", controller.ListMedicineUse)
-			protected.GET("/medicine_use/:id", controller.GetMedicineUse)
-			protected.POST("/medicine_use", controller.CreateMedicineUse)
-			protected.PATCH("/medicine_use", controller.UpdateMedicineUse)
-			protected.DELETE("/medicine_use/:id", controller.DeleteMedicineUse)
-
-			//Warning
-			protected.GET("/warnings", controller.ListWarning)
-			protected.GET("/warning/:id", controller.GetWarning)
-			protected.POST("/warning", controller.CreateWarning)
-			protected.PATCH("/warning", controller.UpdateWarning)
-			protected.DELETE("/warning/:id", controller.DeleteWarning)
 		}
 	}
 
@@ -117,6 +97,20 @@ func main() {
 			protected.PATCH("/medicine", controller.UpdateMedicine)
 			protected.DELETE("/medicine/:id", controller.DeleteMedicine)
 
+			//Medicine Orders
+			//Company Routes
+			protected.GET("/company", controller.ListCompany)
+			protected.GET("/company/:id", controller.GetCompany)
+			protected.POST("/company", controller.CreateCompany)
+			protected.PATCH("/company", controller.UpdateCompany)
+			protected.DELETE("/company/:id", controller.DeleteCompany)
+
+			//Order Routes
+			protected.GET("/medicineorder", controller.ListOrder)
+			protected.GET("/medicineorder/:id", controller.GetOrder)
+			protected.POST("/medicineorder", controller.CreateOrder)
+			protected.PATCH("/medicineorder", controller.UpdateOrder)
+			protected.DELETE("/medicineorder/:id", controller.DeleteOrder)
 		}
 	}
 
@@ -199,10 +193,30 @@ func main() {
 			protected.GET("/employees", controller.ListEmployee)
 			protected.GET("/employee/:id", controller.GetEmployee)
 
+			//Receipt
 			protected.GET("/receipts", controller.ListReceipts)
 			protected.GET("/receipts/:id", controller.GetReceipts)
 			protected.POST("/receipts", controller.CreateReceipts)
 			protected.DELETE("/receipts/:id", controller.DeleteReceipts)
+
+			protected.GET("/paymentTypes", controller.ListPaymentTypes)
+			protected.GET("/paymentTypes/:id", controller.GetPaymentType)
+
+			//prescription
+			protected.GET("/prescriptions", controller.ListPrescription)
+			protected.GET("/prescriptions/:id", controller.GetPrescription)
+
+			//medicine Label
+			protected.GET("/medicinelabels", controller.ListMedicineLabel)
+			protected.GET("/medicinelabels/:id", controller.GetMedicineLabel)
+
+			//PayMedicine
+			protected.GET("/paymedicines", controller.ListPayMedicine)
+			protected.GET("/paymedicines/:id", controller.GetPayMedicine)
+
+			//medicine
+			protected.GET("/medicine", controller.ListMedicine)
+			protected.GET("/medicine/:id", controller.GetMedicine)
 
 		}
 	}
